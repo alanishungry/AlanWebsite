@@ -3,25 +3,26 @@
  */
 
 var alanWebsite = angular.module('alanWebsiteApp', ['ngRoute']);
-alanWebsite.config(function($routeProvider){
+alanWebsite.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-        controller: 'homeCtrl',
-        templateUrl: '../views/home.html'
+            templateUrl: '../views/home.html',
+            controller: 'homeCtrl'
         })
-        .when ('/test', {
-            templateUrl: '../views/test.html'
+        .when('/projects', {
+            templateUrl: '../views/projects.html',
+            controller: 'projectsCtrl'
+        })
+        .when('/resume', {
+            templateUrl: '../views/resume.html',
+            controller: 'resumeCtrl'
+        })
+        .when('/contact', {
+            templateUrl: '../views/contact.html',
+            controller: 'contactCtrl'
+        })
+        .otherwise({
+            templateUrl: '../views/home.html',
+            controller: 'homeCtrl'
         })
 });
-//
-//var controllers = {};
-//controllers.testController = function($scope){
-//    $scope.first = "Info";
-//    $scope.customers=[
-//        {name:'jerry',city:'chicago'},
-//        {name:'tom',city:'houston'},
-//        {name:'enslo',city:'taipei'}
-//    ];
-//}
-//
-//alanWebsite.controller(controllers)

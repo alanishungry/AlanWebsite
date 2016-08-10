@@ -3,7 +3,13 @@
  */
 alanWebsite
     .controller('homeCtrl', function($scope) {
-        $scope.hometext = "Testing angular routing!";
-        $scope.firstName= "John";
-        $scope.lastName= "Doe";
-});
+        $scope.homeClass = "";
+        $scope.activateHome = function() {
+            if($scope.homeClass=="") {
+                $scope.homeClass = "active";
+            } else {
+                $scope.homeClass = "";
+            }
+
+        }
+    });
